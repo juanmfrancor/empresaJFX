@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="500.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="co.edu.uniquindio.poo.empresajfx.viewController.ProductoViewController">
+
+    <children>
+        <SplitPane dividerPositions="0.48"
+                   orientation="VERTICAL"
+                   prefHeight="600.0" prefWidth="500.0"
+                   AnchorPane.topAnchor="0.0"
+                   AnchorPane.bottomAnchor="0.0"
+                   AnchorPane.leftAnchor="0.0"
+                   AnchorPane.rightAnchor="0.0">
+
+            <items>
+                <AnchorPane>
+                    <children>
+                        <Label layoutX="165.0" layoutY="15.0"
+                               text="Gestión Productos">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+
+                        <Label layoutX="35.0" layoutY="60.0" text="Código:"/>
+                        <TextField fx:id="txtCodigo"
+                                   layoutX="130.0" layoutY="55.0"
+                                   prefWidth="280.0"/>
+
+                        <Label layoutX="35.0" layoutY="100.0" text="Nombre:"/>
+                        <TextField fx:id="txtNombre"
+                                   layoutX="130.0" layoutY="95.0"
+                                   prefWidth="280.0"/>
+
+                        <Label layoutX="35.0" layoutY="140.0" text="Precio:"/>
+                        <TextField fx:id="txtPrecio"
+                                   layoutX="130.0" layoutY="135.0"
+                                   prefWidth="280.0"/>
+
+                        <Label layoutX="35.0" layoutY="180.0" text="Cantidad:"/>
+                        <TextField fx:id="txtCantidad"
+                                   layoutX="130.0" layoutY="175.0"
+                                   prefWidth="280.0"/>
+
+                        <Button fx:id="btnAgregarProducto"
+                                layoutX="45.0" layoutY="225.0"
+                                onAction="#onAgregarProducto"
+                                text="Agregar"/>
+
+                        <Button fx:id="btnActualizarProducto"
+                                layoutX="155.0" layoutY="225.0"
+                                onAction="#onActualizarProducto"
+                                text="Actualizar"/>
+
+                        <Button fx:id="btnLimpiar"
+                                layoutX="280.0" layoutY="225.0"
+                                onAction="#onLimpiar"
+                                text="Limpiar"/>
+                    </children>
+                </AnchorPane>
+
+                <AnchorPane>
+                    <children>
+                        <TableView fx:id="tblListProducto"
+                                   layoutX="10.0" layoutY="10.0"
+                                   prefHeight="210.0" prefWidth="470.0"
+                                   AnchorPane.topAnchor="10.0"
+                                   AnchorPane.leftAnchor="10.0"
+                                   AnchorPane.rightAnchor="10.0">
+                            <columns>
+                                <TableColumn fx:id="tbcCodigo"
+                                             prefWidth="100.0"
+                                             text="Código"/>
+                                <TableColumn fx:id="tbcNombre"
+                                             prefWidth="150.0"
+                                             text="Nombre"/>
+                                <TableColumn fx:id="tbcPrecio"
+                                             prefWidth="100.0"
+                                             text="Precio"/>
+                                <TableColumn fx:id="tbcCantidad"
+                                             prefWidth="100.0"
+                                             text="Cantidad"/>
+                            </columns>
+                        </TableView>
+
+                        <Button fx:id="btnEliminar"
+                                layoutX="195.0" layoutY="235.0"
+                                onAction="#onEliminar"
+                                text="Eliminar"/>
+                        <Button layoutX="175.0" layoutY="265.0"
+                                onAction="#onVolverMenu"
+                                text="Volver al menú"/>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
